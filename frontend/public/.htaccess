@@ -1,7 +1,0 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-
-    # Serve arquivos estáticos
-    RewriteRule ^assets/ - [L]
-</IfModule>
