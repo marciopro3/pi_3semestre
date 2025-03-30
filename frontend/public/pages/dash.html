@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/dash.css">
+    <link rel="icon" href="./img/logo-bvcs-icon.ico" type="image/x-icon">
+    <title>Boa Vista Seguros - Orçamentos</title>
+</head>
+
+<body>
+    <nav class="nav-menu-superior">
+        <img class="img-logo-bvcs" src="../assets/images/Logo BVCS - Paisagem.svg" alt="logo-bvcs">
+        <h1 class="h1-title">INTRANET BVCS</h1>
+        <div>
+        <p class="p-version">V1.0.0</p>
+        <p class="p-user"></p>
+        </div>
+    </nav>
+    <div class="container-menu-navegation">
+        <nav class="nav-container-menu-navegation">
+            <p><a href="#">Automóvel</a></p>
+            <p id="a-btn-frota">Frota</p>
+            <p>Residencial</p>
+            <p>Empresarial</p>
+            <p>Reta</p>
+        </nav>
+        <nav class="nav-container-menu-navegation2">
+            <p><a href="#">Admin<i style="margin-left: 5px;" class="fa-solid fa-lock"></i></a></p>
+            <p><a href="#">Sair<i style="margin-left: 5px;" class="fa-solid fa-right-from-bracket"></i></a></p>
+        </nav>
+    </div>
+    <div>
+        <div class="container-pesquisa">
+            <p id="qtde-orcamentos"></p>
+            <select name="tipo-pesquisa" id="tipo-pesquisa">
+                <option value="Nome">Nome</option>
+                <option value="ID">Orçamento</option>
+                <option value="Data">Data</option>
+                <option value="Ramo">Ramo</option>
+            </select>
+            <label for="text">
+                <input type="text" placeholder="Pesquisar... "><i style="margin-left: 8px;" class="fa-solid fa-magnifying-glass"></i>
+            </label>
+        </div>
+        <div class="scrollable-label">
+            <div class="table-container">
+                <table id="table-orcamentos" class="table-orcamentos-salvos">
+                    <thead>
+                        <tr>
+                            <th style="background-color: #068e01;">Editar</th>
+                            <th>Orçamento</th>
+                            <th>Nome</th>
+                            <th>Data</th>
+                            <th>Ramo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874569</td>
+                            <td>MARIA DA SILVA OLIVEIRA</td>
+                            <td>25/04/2024</td>
+                            <td>AUTOMÓVEL</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874570</td>
+                            <td>JOÃO PEREIRA SOUSA</td>
+                            <td>26/04/2024</td>
+                            <td>RESIDENCIAL</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874571</td>
+                            <td>ANA BEATRIZ SANTOS</td>
+                            <td>27/04/2024</td>
+                            <td>EMPRESARIAL</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874572</td>
+                            <td>CARLOS EDUARDO MARTINS</td>
+                            <td>28/04/2024</td>
+                            <td>AUTOMÓVEL</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874573</td>
+                            <td>PAULA LIMA FERREIRA</td>
+                            <td>29/04/2024</td>
+                            <td>RURAL</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874574</td>
+                            <td>FERNANDO PIMENTA COSTA</td>
+                            <td>30/04/2024</td>
+                            <td>EMPRESARIAL</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874575</td>
+                            <td>GABRIELA CRUZ ALMEIDA</td>
+                            <td>01/05/2024</td>
+                            <td>AUTOMÓVEL</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874576</td>
+                            <td>RENATO SOUZA LIMA</td>
+                            <td>02/05/2024</td>
+                            <td>RESIDENCIAL</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874577</td>
+                            <td>SIMONE RIBEIRO ALMEIDA</td>
+                            <td>03/05/2024</td>
+                            <td>EMPRESARIAL</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874578</td>
+                            <td>JULIANO GOMES SILVA</td>
+                            <td>04/05/2024</td>
+                            <td>AUTOMÓVEL</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874579</td>
+                            <td>HELENA COSTA BARBOSA</td>
+                            <td>05/05/2024</td>
+                            <td>RURAL</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/icons/icon-edit.png" alt="icon"></td>
+                            <td>15874580</td>
+                            <td>ANDRÉ MACHADO SILVA</td>
+                            <td>06/05/2024</td>
+                            <td>EMPRESARIAL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="div-footer">
+            <p class="p-email"><a href="#">Suporte <i style="margin-left: 5px;" class="fa-solid fa-circle-question"></i></a></p>
+            <p class="p-cop">Copyright © 2024 Boa Vista Seguros.</p>
+            <p class="p-ajuda"><a href="#">Ajuda <i style="margin-left: 5px;" class="fa-solid fa-circle-info"></i></a></p>
+        </div>
+
+        <script src="js/dash.js"></script>
+
+</body>
+</html>

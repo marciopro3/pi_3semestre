@@ -1,0 +1,31 @@
+# Dependências do Node.js
+node_modules/
+
+# Arquivos de ambiente
+.env
+
+# Arquivos de log
+*.log
+
+# Arquivos de backup
+*.bak
+*.tmp
+
+# Diretórios de build
+dist/
+build/
+out/
+
+# Arquivos de cobertura de testes
+coverage/
+
+# Arquivos temporários
+*.swp
+*.swo
+Thumbs.db
+Desktop.ini
+
+# Configurações de IDEs
+.vscode/
+.idea/
+eslintcache
