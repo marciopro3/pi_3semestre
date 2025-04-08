@@ -83,4 +83,10 @@ const deleteSeguroEmpresarial = async (req, res) => {
   }
 };
 
-module.exports = { getSegurosEmpresarial, getSeguroEmpresarialById, createSeguroEmpresarial, updateSeguroEmpresarial, deleteSeguroEmpresarial };
+module.exports = { 
+  getSegurosEmpresarial, 
+  getSeguroEmpresarialById, 
+  createSeguroEmpresarial, 
+  updateSeguroEmpresarial, 
+  deleteSeguroEmpresarial 
+};

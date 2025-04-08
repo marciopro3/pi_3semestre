@@ -83,4 +83,10 @@ const deleteSeguroFrota = async (req, res) => {
   }
 };
 
-module.exports = { getSegurosFrota, getSeguroFrotaById, createSeguroFrota, updateSeguroFrota, deleteSeguroFrota };
+module.exports = { 
+  getSegurosFrota, 
+  getSeguroFrotaById, 
+  createSeguroFrota, 
+  updateSeguroFrota, 
+  deleteSeguroFrota 
+};

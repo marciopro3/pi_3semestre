@@ -83,4 +83,10 @@ const deleteSeguroResidencial = async (req, res) => {
   }
 };
 
-module.exports = { getSegurosResidencial, getSeguroResidencialById, createSeguroResidencial, updateSeguroResidencial, deleteSeguroResidencial };
+module.exports = { 
+  getSegurosResidencial, 
+  getSeguroResidencialById, 
+  createSeguroResidencial, 
+  updateSeguroResidencial, 
+  deleteSeguroResidencial 
+};

@@ -2,6 +2,8 @@
     RewriteEngine On
     RewriteBase /
 
+    Require all granted
+
     # Serve arquivos estáticos
     RewriteRule ^assets/ - [L]
 </IfModule>

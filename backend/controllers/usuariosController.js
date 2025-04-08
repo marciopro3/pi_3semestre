@@ -1,6 +1,7 @@
 const db = require('../config/db');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const knex = require('../config/db'); // Importe a configuração do Knex
 
 const getUsuarios = async (req, res) => {
     try {
@@ -87,24 +88,27 @@ const deleteUsuario = async (req, res) => {
         res.status(500).json({ message: 'Erro ao excluir usuário', error: error.message });
     }
 };
-
 const loginUsuario = async (req, res) => {
     const { email, senha } = req.body;
 
     try {
-        const usuario = await db('Usuarios').where({ email }).first();
+        console.log('Email recebido:', email);
+        console.log('Senha recebida:', senha);
+
+        const usuario = await db('Usuarios').where({ email: email }).first();
+
+        console.log('Consulta Knex:', db('Usuarios').where({ email: email }).toString());
+        console.log('Resultado da consulta:', usuario);
 
         if (usuario && await bcrypt.compare(senha, usuario.senha)) {
+            // Login bem-sucedido
             const token = jwt.sign(
                 { id: usuario.id, tipo_usuario: usuario.tipo_usuario },
-                process.env.JWT_SECRET,
-                { expiresIn: '1h' }
+                process.env.JWT_SECRET, // Use uma variável de ambiente segura
+                { expiresIn: '1h' } // Defina um tempo de expiração adequado
             );
-            res.json({
-                token,
-                message: 'Login bem-sucedido',
-                nome: usuario.nome, // Adiciona o nome do usuário à resposta
-            });
+
+            res.json({ token, nome: usuario.nome }); // Envia o token e o nome do usuário para o frontend
         } else {
             res.status(401).json({ message: 'Credenciais inválidas' });
         }
@@ -120,5 +124,5 @@ module.exports = {
     createUsuario,
     updateUsuario,
     deleteUsuario,
-    loginUsuario, // Adicione a função loginUsuario aqui
+    loginUsuario,
 };

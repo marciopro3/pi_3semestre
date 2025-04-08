@@ -83,4 +83,10 @@ const deleteSeguroRETA = async (req, res) => {
   }
 };
 
-module.exports = { getSegurosRETA, getSeguroRETAById, createSeguroRETA, updateSeguroRETA, deleteSeguroRETA };
+module.exports = { 
+  getSegurosRETA, 
+  getSeguroRETAById, 
+  createSeguroRETA, 
+  updateSeguroRETA, 
+  deleteSeguroRETA 
+};

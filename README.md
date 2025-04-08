@@ -6,7 +6,7 @@ Este projeto faz parte do nosso **Projeto Integrado (PI)**, desenvolvido ao long
 O sistema será utilizado para **gestão interna**, facilitando a comunicação entre os colaboradores e o gerenciamento de informações da corretora.
 
 ## 🏗️ Estrutura do Ambiente
-O projeto está **hospedado em um servidor local** na minha casa, com IP público **[http://191.254.170.172/](http://191.254.170.172/)**. Para garantir alta disponibilidade e segurança, utilizamos a seguinte infraestrutura:
+O projeto está **hospedado em um servidor local** na minha casa, com IP público **[bvseguros.ddns.net/](http://bvseguros.ddns.net/)**. Para garantir alta disponibilidade e segurança, utilizamos a seguinte infraestrutura:
 
 - **Hardware**: Blade da **Dell**
 - **Virtualização**: **VMware**, rodando uma **VM com Ubuntu Server 24.04**
@@ -77,7 +77,7 @@ O backend rodará na porta **3000** por padrão.
 ### 5️⃣ Configurar e Rodar o Frontend
 O frontend está localizado na pasta **public** do Apache e pode ser acessado pelo navegador via:
 ```sh
-http://191.254.170.172/
+http://bvseguros.ddns.net
 ```
 
 ## 🛡️ Backup e Segurança
@@ -114,4 +114,3 @@ Para dúvidas ou sugestões, entre em contato pelo email: **marcio.soares@sou.un
 
 ---
 **© 2024 Boa Vista Seguros - Projeto Integrado**
-

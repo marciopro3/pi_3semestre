@@ -24,7 +24,7 @@ document.getElementById('login-form').addEventListener('submit', function (event
     const email = document.getElementById('email').value;
     const senha = document.getElementById('passwd').value;
 
-    fetch('http://191.254.170.172:4040/api/usuarios/login', {
+    fetch('http://bvseguros.ddns.net:3000/api/usuarios/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -34,23 +34,23 @@ document.getElementById('login-form').addEventListener('submit', function (event
             senha: senha,
         }),
     })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao autenticar usuário');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data.token) {
-                localStorage.setItem('token', data.token);
-                localStorage.setItem('nomeUsuario', data.nome); // Armazena o nome do usuário
-                window.location.href = 'pages/dash.html';
-            } else {
-                alert('Login falhou. Verifique as credenciais.');
-            }
-        })
-        .catch(error => {
-            console.error(error);
-            alert('Erro ao autenticar. Verifique as credenciais.');
-        });
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao autenticar usuário');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.token) {
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('nomeUsuario', data.nome); // Armazena o nome do usuário
+            window.location.href = 'pages/dash.html';
+        } else {
+            alert('Login falhou. Verifique as credenciais.');
+        }
+    })
+    .catch(error => {
+        console.error(error);
+        alert('Erro ao autenticar. Verifique as credenciais.');
+    });
 });
